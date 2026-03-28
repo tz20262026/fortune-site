@@ -398,7 +398,8 @@ async function getFortune(){
 
 function shareResult(){
     const preview = lastResult.length > 110 ? lastResult.slice(0,110)+'…' : lastResult;
-    const text = `🔮 暴露仙人に本性を暴露されました\n\n${preview}\n\n#暴露仙人 #AI占い`;
+    const siteUrl = 'https://fortune-site-neon.vercel.app';
+    const text = `🔮 暴露仙人に本性を暴露されました\n\n${preview}\n\n#暴露仙人 #AI占い\n${siteUrl}`;
     window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(text), '_blank');
 }
 
