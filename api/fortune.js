@@ -28,33 +28,33 @@ export default async function handler(req, res) {
 - 占いの結果（運勢など）は言わなくていい、本性の暴露に集中する
 - 敬体（です・ます）は使わず、仙人らしい口調で`;
 
+    const userMessage = `名前: ${name}\n生年月日: ${birthday}\n今の悩み: ${worry}\n自分の長所（自己申告）: ${strength}\n最近やらかしたこと: ${blunder}`;
+
     try {
-        const response = await fetch('https://api.anthropic.com/v1/messages', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'x-api-key': process.env.ANTHROPIC_API_KEY,
-                'anthropic-version': '2023-06-01'
-            },
-            body: JSON.stringify({
-                model: 'claude-haiku-4-5-20251001',
-                max_tokens: 600,
-                system: systemPrompt,
-                messages: [{
-                    role: 'user',
-                    content: `名前: ${name}\n生年月日: ${birthday}\n今の悩み: ${worry}\n自分の長所（自己申告）: ${strength}\n最近やらかしたこと: ${blunder}`
-                }]
-            })
-        });
+        const response = await fetch(
+            `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${process.env.GEMINI_API_KEY}`,
+            {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    systemInstruction: { parts: [{ text: systemPrompt }] },
+                    contents: [{ parts: [{ text: userMessage }] }],
+                    generationConfig: { maxOutputTokens: 600 }
+                })
+            }
+        );
 
         if (!response.ok) {
             const err = await response.text();
-            console.error('Anthropic API error:', err);
+            console.error('Gemini API error:', err);
             return res.status(500).json({ error: 'API error' });
         }
 
         const data = await response.json();
-        return res.status(200).json({ result: data.content[0].text });
+        const result = data.candidates?.[0]?.content?.parts?.[0]?.text;
+        if (!result) return res.status(500).json({ error: 'Empty response' });
+
+        return res.status(200).json({ result });
 
     } catch (err) {
         console.error(err);
