@@ -434,47 +434,112 @@ function show(id){
 </script>
 
 <!-- A8アフィリエイト：おすすめ占いサービス -->
-<section id="affiliate-section" style="margin: 40px auto; max-width: 580px; padding: 0 16px;">
+<section id="affiliate-section" style="margin: 48px auto 0; max-width: 580px; padding: 0 16px 60px;">
   <style>
-    .af-section-title { text-align:center; color:#c9a0ff; font-size:1.1rem; margin-bottom:16px; }
-    .af-card { display:flex; flex-direction:column; align-items:center; gap:6px;
-      background:linear-gradient(135deg,#1a0a2e,#2a0a3e);
-      border:1px solid #7c3aed44; border-radius:12px; padding:16px;
+    #affiliate-section { font-family: 'Noto Sans JP', sans-serif; }
+    .af-title { text-align:center; color:#c084fc; font-size:0.95rem; font-weight:700; margin-bottom:6px; letter-spacing:.05em; }
+    .af-subtitle { text-align:center; color:#a78bfa; font-size:0.75rem; margin-bottom:20px; opacity:.8; }
+    .af-card {
+      display:flex; flex-direction:column; gap:10px;
+      background:linear-gradient(135deg,rgba(109,40,217,.18),rgba(67,20,127,.25));
+      border:1px solid rgba(139,92,246,.3); border-radius:16px; padding:18px 20px;
       text-decoration:none; color:#f0e6ff; margin-bottom:12px;
-      transition:transform .2s,border-color .2s; }
-    .af-card:hover { transform:translateY(-2px); border-color:#a855f7; }
-    .af-label { font-size:0.7rem; color:#a855f7; font-weight:700; }
-    .af-name { font-size:0.95rem; font-weight:700; text-align:center; }
-    .af-btn { background:#7c3aed; color:#fff; border-radius:20px; padding:6px 18px;
-      font-size:0.8rem; font-weight:700; margin-top:4px; }
+      transition:transform .25s,border-color .25s,box-shadow .25s;
+      backdrop-filter:blur(6px);
+    }
+    .af-card:hover { transform:translateY(-3px); border-color:#a855f7; box-shadow:0 8px 32px rgba(139,92,246,.25); }
+    .af-card-top { display:flex; align-items:center; justify-content:space-between; gap:8px; }
+    .af-badge { font-size:.65rem; font-weight:800; color:#d8b4fe; background:rgba(139,92,246,.2); border:1px solid rgba(139,92,246,.3); border-radius:20px; padding:3px 10px; white-space:nowrap; }
+    .af-reward { font-size:.65rem; font-weight:800; color:#34d399; background:rgba(52,211,153,.1); border-radius:20px; padding:3px 10px; }
+    .af-name { font-size:1rem; font-weight:800; line-height:1.35; }
+    .af-desc { font-size:.75rem; color:#c4b5fd; line-height:1.6; opacity:.9; }
+    .af-tags { display:flex; flex-wrap:wrap; gap:6px; }
+    .af-tag { font-size:.6rem; color:#ddd6fe; background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.12); border-radius:20px; padding:2px 9px; }
+    .af-btn {
+      display:block; text-align:center; background:linear-gradient(135deg,#7c3aed,#a855f7);
+      color:#fff; font-weight:800; font-size:.85rem; border-radius:12px; padding:11px;
+      margin-top:2px; transition:opacity .2s;
+    }
+    .af-card:hover .af-btn { opacity:.88; }
   </style>
-  <p class="af-section-title">🔮 もっと深く占いたいあなたへ</p>
-  
-        <a href="https://px.a8.net/svt/ejp?a8mat=4B5RS6+FEAKZ6+4PWE+C0B9U" rel="nofollow sponsored" target="_blank" class="af-card">
-          <span class="af-label">✨ おすすめ</span>
-          <span class="af-name">ミラーメール占い</span>
-          <span class="af-btn">今すぐ試す →</span>
-        </a>
-        <a href="https://px.a8.net/svt/ejp?a8mat=4B5RS7+UYK8I+3SKE+60H7M" rel="nofollow sponsored" target="_blank" class="af-card">
-          <span class="af-label">✨ おすすめ</span>
-          <span class="af-name">恋愛応援スペーシア電話占い</span>
-          <span class="af-btn">今すぐ試す →</span>
-        </a>
-        <a href="https://px.a8.net/svt/ejp?a8mat=4B5RS7+UD4MQ+5SGG+5YJRM" rel="nofollow sponsored" target="_blank" class="af-card">
-          <span class="af-label">✨ おすすめ</span>
-          <span class="af-name">チャット占いブリランテ</span>
-          <span class="af-btn">今すぐ試す →</span>
-        </a>
-        <a href="https://px.a8.net/svt/ejp?a8mat=4B5RS6+FK8X0Y+2PEO+1BPGPE" rel="nofollow sponsored" target="_blank" class="af-card">
-          <span class="af-label">✨ おすすめ</span>
-          <span class="af-name">ココナラ占い</span>
-          <span class="af-btn">今すぐ試す →</span>
-        </a>
-        <a href="https://px.a8.net/svt/ejp?a8mat=4B5RS6+FJNHF6+2PEO+C28PU" rel="nofollow sponsored" target="_blank" class="af-card">
-          <span class="af-label">✨ おすすめ</span>
-          <span class="af-name">ココナラ電話占い</span>
-          <span class="af-btn">今すぐ試す →</span>
-        </a>
+
+  <p class="af-title">🔮 もっと深く知りたいあなたへ</p>
+  <p class="af-subtitle">プロの占い師に相談してみませんか？</p>
+
+  <a href="https://px.a8.net/svt/ejp?a8mat=4B5RS7+UD4MQ+5SGG+5YJRM" rel="nofollow sponsored" target="_blank" class="af-card">
+    <div class="af-card-top">
+      <span class="af-badge">⚡ 高報酬・EPC97円</span>
+      <span class="af-reward">成果報酬5,000円</span>
+    </div>
+    <div class="af-name">💜 チャット占い【ブリランテ】</div>
+    <div class="af-desc">新規コイン購入＋鑑定利用で高報酬！本格鑑定がチャットで気軽に受けられる。</div>
+    <div class="af-tags">
+      <span class="af-tag">✓ チャットで完結</span>
+      <span class="af-tag">✓ 24時間対応</span>
+      <span class="af-tag">✓ 匿名OK</span>
+    </div>
+    <span class="af-btn">今すぐ占いを試す →</span>
+  </a>
+
+  <a href="https://px.a8.net/svt/ejp?a8mat=4B5RS6+FJNHF6+2PEO+C28PU" rel="nofollow sponsored" target="_blank" class="af-card">
+    <div class="af-card-top">
+      <span class="af-badge">📺 TVCM放映中</span>
+      <span class="af-reward">成果報酬16,000円</span>
+    </div>
+    <div class="af-name">📞 ococonara 電話占い</div>
+    <div class="af-desc">初回最大30分無料！実力派占い師が多数在籍。恋愛・仕事・人間関係なんでも相談できる。</div>
+    <div class="af-tags">
+      <span class="af-tag">✓ 初回最大30分無料</span>
+      <span class="af-tag">✓ 電話で手軽に</span>
+      <span class="af-tag">✓ 2,000人以上在籍</span>
+    </div>
+    <span class="af-btn">初回無料で占ってもらう →</span>
+  </a>
+
+  <a href="https://px.a8.net/svt/ejp?a8mat=4B5RS6+FEAKZ6+4PWE+C0B9U" rel="nofollow sponsored" target="_blank" class="af-card">
+    <div class="af-card-top">
+      <span class="af-badge">👤 50万人以上が体験</span>
+      <span class="af-reward">成果報酬2,200円</span>
+    </div>
+    <div class="af-name">✉️ ミラーメール占い</div>
+    <div class="af-desc">名前・電話番号の入力不要！無料会員登録だけで本格占いをすぐ体験できる。50万人が利用中。</div>
+    <div class="af-tags">
+      <span class="af-tag">✓ 電話番号不要</span>
+      <span class="af-tag">✓ 無料で体験可</span>
+      <span class="af-tag">✓ 2,000人以上の占い師</span>
+    </div>
+    <span class="af-btn">名前だけで今すぐ占う →</span>
+  </a>
+
+  <a href="https://px.a8.net/svt/ejp?a8mat=4B5RS7+UYK8I+3SKE+60H7M" rel="nofollow sponsored" target="_blank" class="af-card">
+    <div class="af-card-top">
+      <span class="af-badge">🔥 当たると評判</span>
+      <span class="af-reward">成果報酬1,500円</span>
+    </div>
+    <div class="af-name">📱 霊感霊視の電話占い【スペーシア】</div>
+    <div class="af-desc">霊感・霊視・タロット・数秘術…本物の力で深く鑑定。恋愛・復縁・縁結びに強い占い師多数。</div>
+    <div class="af-tags">
+      <span class="af-tag">✓ 霊感霊視対応</span>
+      <span class="af-tag">✓ 恋愛・復縁に強い</span>
+      <span class="af-tag">✓ 3回まで無料</span>
+    </div>
+    <span class="af-btn">霊感占いを今すぐ体験 →</span>
+  </a>
+
+  <a href="https://px.a8.net/svt/ejp?a8mat=4B5RS6+FK8X0Y+2PEO+1BPGPE" rel="nofollow sponsored" target="_blank" class="af-card">
+    <div class="af-card-top">
+      <span class="af-badge">📺 TVCMで話題</span>
+      <span class="af-reward">成果報酬2,000円</span>
+    </div>
+    <div class="af-name">💌 ococonara メール占い</div>
+    <div class="af-desc">実力派占い師・カウンセラーに悩みをメールで相談。自分のペースで深く掘り下げてもらえる。</div>
+    <div class="af-tags">
+      <span class="af-tag">✓ メールで気軽に相談</span>
+      <span class="af-tag">✓ 占い師2,000人以上</span>
+      <span class="af-tag">✓ 匿名OK</span>
+    </div>
+    <span class="af-btn">占い師に相談してみる →</span>
+  </a>
 </section>
 <!-- /A8アフィリエイト -->
 </body>
