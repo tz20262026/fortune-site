@@ -1,0 +1,6 @@
+.vercel
+
+# 除外ファイル
+*.zip
+*.docx
+*.txt

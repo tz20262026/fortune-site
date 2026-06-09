@@ -211,6 +211,13 @@
             font-size: .85rem;
         }
 
+        .result-image {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            display: block;
+        }
+
         .result-body {
             background: rgba(0,0,0,.3);
             border-radius: 12px;
@@ -220,6 +227,8 @@
             white-space: pre-wrap;
             margin-bottom: 24px;
             border: 1px solid rgba(109,40,217,.2);
+            max-height: 420px;
+            overflow-y: auto;
         }
 
         .btn-share {
@@ -320,6 +329,7 @@
             <p class="result-for" id="resultFor"></p>
         </div>
         <div class="result-body" id="resultBody"></div>
+        <img id="resultImage" class="result-image" src="" alt="">
         <button class="btn-share" onclick="shareResult()">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             この結果をポストする
@@ -356,6 +366,14 @@
     resize();
 })();
 
+// --- Images ---
+const IMAGES = Array.from({length: 30}, (_,i) => `/images/IMG_${8819+i}.PNG`);
+
+function setRandomImage(){
+    const img = document.getElementById('resultImage');
+    img.src = IMAGES[Math.floor(Math.random() * IMAGES.length)];
+}
+
 // --- Fortune ---
 let lastResult = '';
 let lastName = '';
@@ -386,6 +404,7 @@ async function getFortune(){
             lastResult = data.result;
             document.getElementById('resultFor').textContent = name + 'さんへ';
             document.getElementById('resultBody').textContent = data.result;
+            setRandomImage();
             show('resultCard');
         } else {
             throw new Error();
