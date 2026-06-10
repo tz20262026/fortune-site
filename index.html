@@ -334,6 +334,25 @@
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             この結果をポストする
         </button>
+
+        <!-- 結果シェアセクション -->
+        <div id="share-section" style="display:none; text-align:center; margin-top:24px;">
+          <p style="color:#c084fc; font-size:14px; margin-bottom:12px;">この結果をシェアして友達も試させよう！</p>
+          <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+            <a id="share-x" href="#" target="_blank" rel="noopener"
+              style="display:inline-flex; align-items:center; gap:8px; background:#000; color:#fff; padding:10px 20px; border-radius:999px; text-decoration:none; font-weight:bold; font-size:14px;">
+              𝕏 でシェア
+            </a>
+            <a id="share-line" href="#" target="_blank" rel="noopener"
+              style="display:inline-flex; align-items:center; gap:8px; background:#06C755; color:#fff; padding:10px 20px; border-radius:999px; text-decoration:none; font-weight:bold; font-size:14px;">
+              LINE でシェア
+            </a>
+          </div>
+          <p style="color:#9ca3af; font-size:12px; margin-top:16px;">
+            ※AIが本性を暴露する毒舌占い、無料・登録不要
+          </p>
+        </div>
+
         <button class="btn-retry" onclick="retry()">もう一度占う</button>
     </div>
 
@@ -406,6 +425,7 @@ async function getFortune(){
             document.getElementById('resultBody').textContent = data.result;
             setRandomImage();
             show('resultCard');
+            showShareButtons(data.result);
         } else {
             throw new Error();
         }
@@ -422,7 +442,25 @@ function shareResult(){
     window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(text), '_blank');
 }
 
+// シェアボタン表示・URL設定
+function showShareButtons(resultText) {
+  const shareSection = document.getElementById('share-section');
+  if (!shareSection) return;
+  shareSection.style.display = 'block';
+
+  const shortResult = resultText ? resultText.slice(0, 50) + '...' : '衝撃の結果が出ました';
+  const siteUrl = 'https://fortune-site-neon.vercel.app';
+  const tweetText = encodeURIComponent(`AIに本性を暴露されました😱「${shortResult}」あなたも試して → ${siteUrl} #AI占い #暴露仙人`);
+  const lineText = encodeURIComponent(`AIに本性を暴露されました！「${shortResult}」あなたも試して → ${siteUrl}`);
+
+  document.getElementById('share-x').href = `https://twitter.com/intent/tweet?text=${tweetText}`;
+  document.getElementById('share-line').href = `https://line.me/R/share?text=${lineText}`;
+}
+
 function retry(){
+    // シェアボタンを非表示に戻す
+    const shareSection = document.getElementById('share-section');
+    if (shareSection) shareSection.style.display = 'none';
     show('formCard');
 }
 
@@ -432,6 +470,18 @@ function show(id){
     });
 }
 </script>
+
+<!-- 友達にも試させようCTA -->
+<div style="max-width:580px; margin:0 auto; padding:0 16px;">
+  <div style="background:linear-gradient(135deg,rgba(139,92,246,0.15),rgba(217,70,239,0.1)); border:1px solid rgba(139,92,246,0.3); border-radius:16px; padding:24px; text-align:center; margin:24px 0;">
+    <p style="color:#c084fc; font-size:20px; font-weight:900; margin-bottom:8px;">🔮 友達にも試させよう</p>
+    <p style="color:#d1d5db; font-size:14px; margin-bottom:16px;">AIが容赦なく本性を暴露します。あなたの友達の本性も丸裸に…</p>
+    <a href="https://fortune-site-neon.vercel.app" onclick="window.location.reload(); return false;"
+      style="display:inline-block; background:linear-gradient(135deg,#7c3aed,#a855f7); color:#fff; padding:12px 32px; border-radius:999px; text-decoration:none; font-weight:900; font-size:16px;">
+      もう一度占う ↺
+    </a>
+  </div>
+</div>
 
 <!-- A8アフィリエイト：おすすめ占いサービス -->
 <section id="affiliate-section" style="margin: 48px auto 0; max-width: 580px; padding: 0 16px 60px;">
