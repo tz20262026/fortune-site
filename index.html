@@ -375,6 +375,29 @@
           </p>
         </div>
 
+        <!-- 結果直後CTA：本格占いへの誘導 -->
+        <div id="result-cta" style="display:none; margin-top:20px;">
+          <p style="text-align:center; color:#c084fc; font-size:.8rem; font-weight:700; letter-spacing:.05em; margin-bottom:12px;">🔮 本性を暴露された…もっと深く鑑定してもらう？</p>
+          <a href="https://px.a8.net/svt/ejp?a8mat=4B5RS6+FJNHF6+2PEO+C28PU" rel="nofollow sponsored" target="_blank"
+            style="display:flex; align-items:center; justify-content:space-between; background:linear-gradient(135deg,rgba(109,40,217,.2),rgba(67,20,127,.3)); border:1px solid rgba(139,92,246,.4); border-radius:14px; padding:14px 18px; text-decoration:none; color:#f0e6ff; margin-bottom:10px; transition:opacity .2s;">
+            <div>
+              <div style="font-size:.62rem; color:#a78bfa; font-weight:800; margin-bottom:3px;">📺 TVCM放映中</div>
+              <div style="font-size:.95rem; font-weight:900;">ococonara 電話占い</div>
+              <div style="font-size:.72rem; color:#c4b5fd; margin-top:2px;">初回最大30分無料 · 2,000人以上の占い師在籍</div>
+            </div>
+            <span style="background:linear-gradient(135deg,#7c3aed,#db2777); color:#fff; font-size:.72rem; font-weight:800; padding:6px 12px; border-radius:999px; white-space:nowrap; margin-left:8px;">無料で試す →</span>
+          </a>
+          <a href="https://px.a8.net/svt/ejp?a8mat=4B5RS7+UYK8I+3SKE+60H7M" rel="nofollow sponsored" target="_blank"
+            style="display:flex; align-items:center; justify-content:space-between; background:linear-gradient(135deg,rgba(109,40,217,.15),rgba(67,20,127,.2)); border:1px solid rgba(167,139,250,.3); border-radius:14px; padding:14px 18px; text-decoration:none; color:#f0e6ff; margin-bottom:10px; transition:opacity .2s;">
+            <div>
+              <div style="font-size:.62rem; color:#a78bfa; font-weight:800; margin-bottom:3px;">🔥 当たると評判</div>
+              <div style="font-size:.95rem; font-weight:900;">霊感霊視の電話占い【スペーシア】</div>
+              <div style="font-size:.72rem; color:#c4b5fd; margin-top:2px;">霊感・霊視・タロット · 恋愛復縁に強い · 3回まで無料</div>
+            </div>
+            <span style="background:linear-gradient(135deg,#7c3aed,#a855f7); color:#fff; font-size:.72rem; font-weight:800; padding:6px 12px; border-radius:999px; white-space:nowrap; margin-left:8px;">霊感鑑定を試す →</span>
+          </a>
+        </div>
+
         <button class="btn-retry" onclick="retry()">もう一度占う</button>
     </div>
 
@@ -448,6 +471,7 @@ async function getFortune(){
             setRandomImage();
             show('resultCard');
             showShareButtons(data.result);
+            document.getElementById('result-cta').style.display = 'block';
         } else {
             throw new Error();
         }
@@ -483,6 +507,8 @@ function retry(){
     // シェアボタンを非表示に戻す
     const shareSection = document.getElementById('share-section');
     if (shareSection) shareSection.style.display = 'none';
+    const resultCta = document.getElementById('result-cta');
+    if (resultCta) resultCta.style.display = 'none';
     show('formCard');
 }
 
