@@ -1103,8 +1103,11 @@ function show(id){
   </div>
 
   <div style="background:rgba(109,40,217,.09); border:1px solid rgba(109,40,217,.35); border-radius:18px; padding:28px 24px; backdrop-filter:blur(14px);">
-    <div id="contact-form-wrap">
-      <form id="contactForm" onsubmit="handleContact(event)">
+    <form action="https://formsubmit.co/tz77772014@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="暴露仙人 お問い合わせ" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_next" value="https://fortune-site-neon.vercel.app" />
         <div style="margin-bottom:18px;">
           <label style="display:block; font-size:.78rem; font-weight:700; color:#c4b5fd; margin-bottom:7px; letter-spacing:.03em;">お名前 <span style="color:#f87171;">*</span></label>
           <input type="text" name="name" placeholder="山田 太郎" required
@@ -1126,61 +1129,14 @@ function show(id){
             onfocus="this.style.borderColor='#8b5cf6';this.style.boxShadow='0 0 12px rgba(139,92,246,.4)'"
             onblur="this.style.borderColor='rgba(109,40,217,.45)';this.style.boxShadow='none'"></textarea>
         </div>
-        <button type="submit" id="contactBtn"
+        <button type="submit"
           style="width:100%; padding:15px; background:linear-gradient(135deg,#7c3aed,#db2777); border:none; border-radius:10px; color:#fff; font-size:1rem; font-weight:700; font-family:'Noto Sans JP',sans-serif; cursor:pointer; letter-spacing:.04em; transition:transform .2s,box-shadow .2s; box-shadow:0 4px 20px rgba(124,58,237,.4);"
           onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 28px rgba(124,58,237,.6)'"
           onmouseout="this.style.transform='';this.style.boxShadow='0 4px 20px rgba(124,58,237,.4)'">
           送信する ✨
         </button>
-        <div id="contact-error" style="display:none; margin-top:12px; text-align:center; color:#f87171; font-size:.8rem;"></div>
-      </form>
-    </div>
-    <div id="contact-thanks" style="display:none; text-align:center; padding:20px 0;">
-      <div style="font-size:2.5rem; margin-bottom:12px;">✨</div>
-      <p style="font-family:'Noto Serif JP',serif; font-size:1.1rem; color:#fbbf24; margin-bottom:8px;">お問い合わせありがとうございます</p>
-      <p style="font-size:.82rem; color:#c4b5fd; line-height:1.7;">メッセージを受け付けました。<br>確認後、メールにてご返信いたします。</p>
-    </div>
+    </form>
   </div>
 </section>
-
-<script>
-async function handleContact(e) {
-  e.preventDefault();
-  const form = e.target;
-  const btn = document.getElementById('contactBtn');
-  const errEl = document.getElementById('contact-error');
-  errEl.style.display = 'none';
-
-  btn.disabled = true;
-  btn.textContent = '送信中…';
-  btn.style.opacity = '0.65';
-
-  const formData = new FormData(form);
-  formData.append('_subject', '暴露仙人 お問い合わせ');
-  formData.append('_template', 'table');
-  formData.append('_captcha', 'false');
-
-  try {
-    const res = await fetch('https://formsubmit.co/ajax/tz77772014@gmail.com', {
-      method: 'POST',
-      headers: { 'Accept': 'application/json' },
-      body: formData,
-    });
-    const result = await res.json();
-    if (result.success === 'true' || result.success === true) {
-      document.getElementById('contact-form-wrap').style.display = 'none';
-      document.getElementById('contact-thanks').style.display = 'block';
-    } else {
-      throw new Error('送信失敗');
-    }
-  } catch (err) {
-    errEl.textContent = '送信に失敗しました。tz77772014@gmail.com まで直接ご連絡ください。';
-    errEl.style.display = 'block';
-    btn.disabled = false;
-    btn.textContent = '送信する ✨';
-    btn.style.opacity = '';
-  }
-}
-</script>
 </body>
 </html>
