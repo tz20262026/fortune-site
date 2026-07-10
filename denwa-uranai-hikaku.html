@@ -11,7 +11,10 @@
   <meta property="og:type" content="article">
   <meta property="og:locale" content="ja_JP">
   <meta property="og:url" content="https://fortune-site-neon.vercel.app/denwa-uranai-hikaku.html">
+  <meta property="og:image" content="https://fortune-site-neon.vercel.app/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="電話占いサービス比較ランキング2026年【料金・特徴・評判まとめ】">
+  <meta name="twitter:description" content="電話占いサービスを料金・無料特典・占い師数・得意分野で徹底比較。2026年おすすめTOP5。">
   <meta name="twitter:image" content="https://fortune-site-neon.vercel.app/og-image.png">
   <link rel="canonical" href="https://fortune-site-neon.vercel.app/denwa-uranai-hikaku.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -140,6 +143,15 @@
         占い師数を徹底比較して<br>
         あなたに合ったサービスを厳選
       </p>
+    </div>
+
+    <!-- ファーストビュー：編集部イチ押し（迷ったらコレ1択） -->
+    <div style="background:linear-gradient(135deg,rgba(153,27,27,.3),rgba(180,83,9,.25)); border:2px solid rgba(251,191,36,.55); border-radius:16px; padding:22px 20px; margin:0 0 20px; box-shadow:0 6px 30px rgba(245,158,11,.18);">
+      <p style="text-align:center; font-size:.72rem; font-weight:900; color:#fbbf24; letter-spacing:.08em; margin-bottom:8px;">＼ 迷ったらコレ！編集部イチ押し ／</p>
+      <p style="text-align:center; font-size:1.25rem; font-weight:900; color:#fef3c7; margin-bottom:8px;">電話占いヴェルニ</p>
+      <p style="text-align:center; font-size:.78rem; color:#fde68a; line-height:1.8; margin-bottom:14px;">🎁 新規登録で3,000円分無料ポイント<br>実力派占い師1400名以上在籍｜1分100円〜</p>
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B5RS6+FT6F3M+2H0Q+U6ODE" rel="nofollow sponsored" target="_blank" style="display:block; text-align:center; background:linear-gradient(135deg,#dc2626,#f59e0b); color:#fff; font-weight:900; font-size:.98rem; padding:15px; border-radius:999px; text-decoration:none; box-shadow:0 4px 20px rgba(220,38,38,.35);">🔥 ヴェルニを新規特典で無料で試す →</a>
+      <p style="text-align:center; font-size:.68rem; color:#e9d5ff; margin-top:8px;">※登録は無料・特典は新規会員のみ・恋愛/復縁の相談に特に強い</p>
     </div>
 
     <div style="text-align:center;margin:0 0 32px;">
@@ -364,5 +376,35 @@
   </div>
 
 <footer style="text-align:center;margin-top:2rem;padding:1rem 0;font-size:0.7rem;color:#6b7280;">© 2026 暴露仙人 | <a href="/privacy.html" style="color:#8b5cf6;">プライバシーポリシー</a></footer>
+
+<!-- モバイル追従CTAバー（閉じるボタン付き） -->
+<div id="sticky-cta" style="display:none; position:fixed; left:0; right:0; bottom:0; z-index:999; background:linear-gradient(135deg,#2e1065,#4c1d95); border-top:1px solid rgba(251,191,36,.45); padding:10px 12px; box-shadow:0 -4px 20px rgba(0,0,0,.5);">
+  <div style="display:flex; align-items:center; gap:10px; max-width:640px; margin:0 auto;">
+    <div style="flex:1; min-width:0;">
+      <p style="font-size:.62rem; color:#fbbf24; font-weight:800; margin:0;">編集部イチ押し｜電話占いヴェルニ</p>
+      <p style="font-size:.7rem; color:#e9d5ff; margin:0;">🎁 新規3,000円分無料ポイント</p>
+    </div>
+    <a href="https://px.a8.net/svt/ejp?a8mat=4B5RS6+FT6F3M+2H0Q+U6ODE" rel="nofollow sponsored" target="_blank" style="flex-shrink:0; background:linear-gradient(135deg,#dc2626,#f59e0b); color:#fff; font-weight:900; font-size:.78rem; padding:10px 16px; border-radius:999px; text-decoration:none; white-space:nowrap;">無料で試す →</a>
+    <button id="sticky-cta-close" aria-label="このバーを閉じる" style="flex-shrink:0; background:rgba(255,255,255,.12); border:none; color:#e9d5ff; width:30px; height:30px; border-radius:50%; font-size:.9rem; cursor:pointer; line-height:1;">✕</button>
+  </div>
+</div>
+<script>
+(function(){
+  var bar = document.getElementById('sticky-cta');
+  var closeBtn = document.getElementById('sticky-cta-close');
+  if(!bar || !closeBtn) return;
+  var closed = false;
+  try { closed = sessionStorage.getItem('stickyCtaClosed') === '1'; } catch(e){}
+  if(!closed && window.innerWidth < 768){
+    bar.style.display = 'block';
+    document.body.style.paddingBottom = '72px';
+  }
+  closeBtn.addEventListener('click', function(){
+    bar.style.display = 'none';
+    document.body.style.paddingBottom = '';
+    try { sessionStorage.setItem('stickyCtaClosed','1'); } catch(e){}
+  });
+})();
+</script>
 </body>
 </html>

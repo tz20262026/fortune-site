@@ -14,6 +14,8 @@
 <meta name="twitter:image" content="https://fortune-site-neon.vercel.app/og-image.png">
   <meta property="og:type" content="article">
   <meta property="og:locale" content="ja_JP">
+  <meta property="og:url" content="https://fortune-site-neon.vercel.app/denwa-uranai-ranking.html">
+  <meta property="og:image" content="https://fortune-site-neon.vercel.app/og-image.png">
   <link rel="canonical" href="https://fortune-site-neon.vercel.app/denwa-uranai-ranking.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
@@ -492,5 +494,34 @@
 </footer>
 </div>
 
+<!-- モバイル追従CTAバー（閉じるボタン付き） -->
+<div id="sticky-cta" style="display:none; position:fixed; left:0; right:0; bottom:0; z-index:999; background:linear-gradient(135deg,#2e1065,#4c1d95); border-top:1px solid rgba(251,191,36,.45); padding:10px 12px; box-shadow:0 -4px 20px rgba(0,0,0,.5);">
+  <div style="display:flex; align-items:center; gap:10px; max-width:640px; margin:0 auto;">
+    <div style="flex:1; min-width:0;">
+      <p style="font-size:.62rem; color:#fbbf24; font-weight:800; margin:0;">編集部特選｜電話占いヴェルニ</p>
+      <p style="font-size:.7rem; color:#e9d5ff; margin:0;">実力派占い師1400名以上・新規特典あり</p>
+    </div>
+    <a href="https://px.a8.net/svt/ejp?a8mat=4B5RS6+FT6F3M+2H0Q+U6ODE" rel="nofollow sponsored" target="_blank" style="flex-shrink:0; background:linear-gradient(135deg,#dc2626,#f59e0b); color:#fff; font-weight:900; font-size:.78rem; padding:10px 16px; border-radius:999px; text-decoration:none; white-space:nowrap;">無料で試す →</a>
+    <button id="sticky-cta-close" aria-label="このバーを閉じる" style="flex-shrink:0; background:rgba(255,255,255,.12); border:none; color:#e9d5ff; width:30px; height:30px; border-radius:50%; font-size:.9rem; cursor:pointer; line-height:1;">✕</button>
+  </div>
+</div>
+<script>
+(function(){
+  var bar = document.getElementById('sticky-cta');
+  var closeBtn = document.getElementById('sticky-cta-close');
+  if(!bar || !closeBtn) return;
+  var closed = false;
+  try { closed = sessionStorage.getItem('stickyCtaClosed') === '1'; } catch(e){}
+  if(!closed && window.innerWidth < 768){
+    bar.style.display = 'block';
+    document.body.style.paddingBottom = '72px';
+  }
+  closeBtn.addEventListener('click', function(){
+    bar.style.display = 'none';
+    document.body.style.paddingBottom = '';
+    try { sessionStorage.setItem('stickyCtaClosed','1'); } catch(e){}
+  });
+})();
+</script>
 </body>
 </html>
