@@ -1852,6 +1852,129 @@ function show(id){
 </section>
 <!-- /バリューコマース -->
 
+<!-- アクセストレード（2026-07-14追加）。A8／もしも／バリューコマースとは独立した別セクション -->
+<section id="at-section" style="margin: 8px auto 0; max-width: 580px; padding: 0 16px 40px;">
+  <style>
+    #at-section { font-family: 'Noto Sans JP', sans-serif; }
+    .at-pr { display:block; text-align:center; font-size:.62rem; font-weight:800; color:#fcd34d; letter-spacing:.15em; margin-bottom:6px; }
+    .at-title { text-align:center; color:#fbbf24; font-size:0.95rem; font-weight:700; margin-bottom:6px; letter-spacing:.05em; }
+    .at-subtitle { text-align:center; color:#e9d5ff; font-size:0.75rem; margin-bottom:20px; }
+    /* position:relative は1x1計測画像を絶対配置するために必須（レイアウト崩れ防止） */
+    .at-card {
+      position:relative;
+      display:flex; flex-direction:column; gap:10px;
+      background:linear-gradient(135deg,rgba(76,29,149,.28),rgba(146,64,14,.18));
+      border:1px solid rgba(251,191,36,.28); border-radius:16px; padding:18px 20px;
+      text-decoration:none; color:#fef3c7; margin-bottom:12px;
+      transition:transform .25s,border-color .25s,box-shadow .25s;
+      backdrop-filter:blur(6px);
+    }
+    .at-card:hover { transform:translateY(-3px); border-color:#fbbf24; box-shadow:0 8px 32px rgba(251,191,36,.22); }
+    /* アクセストレードのインプレッション計測用1x1画像（見えないが必ず読み込ませる） */
+    .at-imp { position:absolute; height:1px; width:1px; opacity:0; pointer-events:none; }
+    .at-card-top { display:flex; align-items:center; justify-content:space-between; gap:8px; flex-wrap:wrap; }
+    .at-badge { font-size:.65rem; font-weight:800; color:#fcd34d; background:rgba(251,191,36,.14); border:1px solid rgba(251,191,36,.3); border-radius:20px; padding:3px 10px; white-space:nowrap; }
+    .at-name { font-size:1rem; font-weight:800; line-height:1.35; color:#fef3c7; }
+    .at-desc { font-size:.75rem; color:#f3e8ff; line-height:1.6; }
+    .at-tags { display:flex; flex-wrap:wrap; gap:6px; }
+    .at-tag { font-size:.6rem; color:#fde68a; background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.12); border-radius:20px; padding:2px 9px; }
+    .at-btn {
+      display:block; text-align:center; background:linear-gradient(135deg,#6d28d9,#a855f7);
+      color:#fff; font-weight:800; font-size:.85rem; border-radius:12px; padding:11px;
+      margin-top:2px; transition:opacity .2s;
+    }
+    .at-card:hover .at-btn { opacity:.88; }
+    .at-note { text-align:center; font-size:.62rem; color:#c4b5fd; margin-top:14px; line-height:1.6; }
+  </style>
+
+  <span class="at-pr">［PR / 広告］</span>
+  <p class="at-title">🧹 運気は、部屋と縁から動きはじめる</p>
+  <p class="at-subtitle">断捨離・掃除・出会い——占いで見えた流れを、現実の行動に落とす</p>
+
+  <!-- 開運×断捨離：アールクリーニング 不用品回収（成果報酬5,860円・本セクション最高単価） -->
+  <a href="https://h.accesstrade.net/sp/cc?rk=0100pgyi00ovmu" rel="nofollow sponsored noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" class="at-card">
+    <img src="https://h.accesstrade.net/sp/rr?rk=0100pgyi00ovmu" height="1" width="1" alt="" aria-hidden="true" class="at-imp">
+    <div class="at-card-top">
+      <span class="at-badge">🗑️ まず「捨てる」から</span>
+    </div>
+    <div class="at-name">🚚 アールクリーニング｜不用品回収</div>
+    <div class="at-desc">運気の話をする前に、部屋に置きっぱなしの家具と家電を出してしまう。自分では運び出せない大物を、まとめて引き取ってもらえるサービス。見積もりから相談できる。</div>
+    <div class="at-tags">
+      <span class="at-tag">✓ 大型家具・家電もOK</span>
+      <span class="at-tag">✓ 見積もりから相談</span>
+      <span class="at-tag">✓ 部屋が一気に空く</span>
+    </div>
+    <span class="at-btn">不用品回収を相談する →</span>
+  </a>
+
+  <!-- 人間関係：Dr.Communication（成果報酬3,663円） -->
+  <a href="https://h.accesstrade.net/sp/cc?rk=0100q23900ovmu" rel="nofollow sponsored noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" class="at-card">
+    <img src="https://h.accesstrade.net/sp/rr?rk=0100q23900ovmu" height="1" width="1" alt="" aria-hidden="true" class="at-imp">
+    <div class="at-card-top">
+      <span class="at-badge">🗣️ 人間関係の悩みに</span>
+    </div>
+    <div class="at-name">💬 Dr.Communication｜話し方トレーニング</div>
+    <div class="at-desc">「相性が悪い」で片づける前に、伝え方を変えてみる手もある。会話や説明の組み立てを学べるオンラインのトレーニング。無料体験・カウンセリングだけの参加もできる。</div>
+    <div class="at-tags">
+      <span class="at-tag">✓ オンラインで完結</span>
+      <span class="at-tag">✓ 無料体験あり</span>
+      <span class="at-tag">✓ 会話の型を学べる</span>
+    </div>
+    <span class="at-btn">無料体験を見てみる →</span>
+  </a>
+
+  <!-- 開運×掃除：アールクリーニング 激トク6時間パック（成果報酬3,663円） -->
+  <a href="https://h.accesstrade.net/sp/cc?rk=0100px8t00ovmu" rel="nofollow sponsored noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" class="at-card">
+    <img src="https://h.accesstrade.net/sp/rr?rk=0100px8t00ovmu" height="1" width="1" alt="" aria-hidden="true" class="at-imp">
+    <div class="at-card-top">
+      <span class="at-badge">🧽 水回りから整える</span>
+    </div>
+    <div class="at-name">✨ アールクリーニング｜激トク6時間パック</div>
+    <div class="at-desc">水回りは汚れが溜まりやすく、自力の掃除では戻しきれないことも多い。時間内なら場所を選べる定額パックで、キッチン・浴室・トイレをまとめて任せられる。</div>
+    <div class="at-tags">
+      <span class="at-tag">✓ 時間内なら場所自由</span>
+      <span class="at-tag">✓ 定額パック</span>
+      <span class="at-tag">✓ 水回りをまとめて</span>
+    </div>
+    <span class="at-btn">プランを確認する →</span>
+  </a>
+
+  <!-- 結婚運：naco-do（成果報酬2,500円） -->
+  <a href="https://h.accesstrade.net/sp/cc?rk=0100o94500ovmu" rel="nofollow sponsored noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" class="at-card">
+    <img src="https://h.accesstrade.net/sp/rr?rk=0100o94500ovmu" height="1" width="1" alt="" aria-hidden="true" class="at-imp">
+    <div class="at-card-top">
+      <span class="at-badge">💍 結婚運が動いたら</span>
+    </div>
+    <div class="at-name">📱 naco-do（ナコード）｜スマホの結婚相談所</div>
+    <div class="at-desc">店舗に足を運ばず、スマホだけで進められるオンライン結婚相談所。専任のサポートに相談しながら進められる。まずは無料面談で、条件と進め方を確認するところから。</div>
+    <div class="at-tags">
+      <span class="at-tag">✓ オンライン完結</span>
+      <span class="at-tag">✓ 無料面談あり</span>
+      <span class="at-tag">✓ サポート付き</span>
+    </div>
+    <span class="at-btn">無料面談を予約する →</span>
+  </a>
+
+  <!-- 縁結び：エンジェル（成果報酬2,381円） -->
+  <a href="https://h.accesstrade.net/sp/cc?rk=01001o9t00ovmu" rel="nofollow sponsored noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" class="at-card">
+    <img src="https://h.accesstrade.net/sp/rr?rk=01001o9t00ovmu" height="1" width="1" alt="" aria-hidden="true" class="at-imp">
+    <div class="at-card-top">
+      <span class="at-badge">💞 縁を結びにいく</span>
+    </div>
+    <div class="at-name">👰 エンジェル｜結婚情報サービス</div>
+    <div class="at-desc">性格や価値観を軸に相手を紹介する結婚情報サービス。相互紹介の仕組みで、条件だけでは見つからない相手と出会う可能性を広げる。資料請求・入会案内から確認できる。</div>
+    <div class="at-tags">
+      <span class="at-tag">✓ 価値観重視の紹介</span>
+      <span class="at-tag">✓ 相互紹介の仕組み</span>
+      <span class="at-tag">✓ 案内から確認できる</span>
+    </div>
+    <span class="at-btn">サービスを見てみる →</span>
+  </a>
+
+  <p class="at-note">※ 本セクションはPR・広告（アクセストレード）を含みます</p>
+</section>
+<!-- /アクセストレード -->
+
 <!-- お問い合わせセクション -->
 <section id="contact" style="margin: 0 auto; max-width: 580px; padding: 48px 16px 60px; position: relative; z-index: 1;">
   <div style="text-align:center; margin-bottom: 28px;">
