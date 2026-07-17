@@ -607,6 +607,24 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://fortune-site-neon.vercel.app/2026-kouhanki-unsei.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fortune-site-neon.vercel.app/ryujin-uranai.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fortune-site-neon.vercel.app/hikkoshi-uranai.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://fortune-site-neon.vercel.app/privacy.html</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>yearly</changefreq>
