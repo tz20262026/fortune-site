@@ -1,0 +1,65 @@
+# 暴露仙人
+
+> AIが本性を容赦なく暴露する毒舌占いサイト。名前と生年月日を入力するだけで、隠れた本性・欲望・弱点をAIが診断する無料コンテンツを提供。恋愛・結婚・仕事・運勢など100種類以上の占いコンテンツと、電話占いサービスの比較・ランキング記事を掲載している。
+
+暴露仙人は、Gemini AIによる「本性暴露診断」を核に、恋愛・結婚・仕事運・霊感・タロット・占星術など幅広いジャンルの占いコンテンツを無料で提供する日本語メディア。各コンテンツは診断結果とあわせて、有料の電話占いサービス（アフィリエイト提携）への案内を行っている。
+
+- 言語: 日本語
+- 対象読者: 恋愛・結婚・仕事の悩みを持つ人、占い・スピリチュアルに関心がある人
+- サイトURL: https://fortune-site-neon.vercel.app
+- 収益: 記事内に電話占いサービス等のアフィリエイトリンクを含みます
+
+## AI本性暴露診断（メインコンテンツ）
+- [暴露仙人トップ](https://fortune-site-neon.vercel.app/): 名前・生年月日を入力するAI本性暴露診断。無料・登録不要。
+
+## 電話占い比較・ランキング（提携サービス案内）
+- [電話占いランキング](https://fortune-site-neon.vercel.app/denwa-uranai-ranking.html): 主要電話占いサービスの比較ランキング。
+- [電話占い比較](https://fortune-site-neon.vercel.app/denwa-uranai-hikaku.html): 料金・当たると評判の占い師で比較。
+- [電話占い無料鑑定](https://fortune-site-neon.vercel.app/denwa-uranai-muryou.html): 初回無料で試せる電話占いの探し方。
+- [電話占い料金ガイド](https://fortune-site-neon.vercel.app/denwa-uranai-ryokin.html): 電話占いの料金相場・システム解説。
+- [占い師おすすめ](https://fortune-site-neon.vercel.app/uranaishi-osusume.html): 評判の良い占い師の選び方。
+
+## 恋愛占い
+- [相性診断](https://fortune-site-neon.vercel.app/aishou-check.html): 名前・生年月日による相性診断。
+- [恋愛占い](https://fortune-site-neon.vercel.app/renai-uranai.html): 恋愛運全般の占い。
+- [片思い占い](https://fortune-site-neon.vercel.app/katakoi-uranai.html): 片思いの行方を占う。
+- [複縁占い](https://fortune-site-neon.vercel.app/fukuen-uranai.html): 元恋人との復縁可能性を占う。
+- [ツインレイ占い](https://fortune-site-neon.vercel.app/twin-ray-uranai.html): 運命の対の相手を占うスピリチュアル診断。
+- [ソウルメイト占い](https://fortune-site-neon.vercel.app/soulmate-uranai.html): 魂の伴侶を占う。
+- [遠距離恋愛占い](https://fortune-site-neon.vercel.app/enkyori-renai-uranai.html): 遠距離恋愛の行方を占う。
+- [三角関係占い](https://fortune-site-neon.vercel.app/sankaku-kankei-uranai.html): 複雑な恋愛関係を占う。
+- [浮気占い](https://fortune-site-neon.vercel.app/uwaki-uranai.html) / [浮気診断](https://fortune-site-neon.vercel.app/uwaki-shindan.html): パートナーの浮気の可能性を占う。
+
+## 結婚・婚活占い
+- [結婚占い](https://fortune-site-neon.vercel.app/kekkon-uranai.html): 結婚運全般を占う。
+- [婚活占い](https://fortune-site-neon.vercel.app/konkatsu-uranai.html): 婚活の行方を占う。
+- [結婚できない占い](https://fortune-site-neon.vercel.app/kekkon-dekinai-uranai.html): 結婚できない理由を占う。
+- [縁結び占い](https://fortune-site-neon.vercel.app/enmusubi-uranai.html): 良縁を引き寄せる占い。
+- [縁切り占い](https://fortune-site-neon.vercel.app/enkiri-uranai.html): 悪縁を断ち切る占い。
+- [再婚占い](https://fortune-site-neon.vercel.app/saikon-uranai.html): 再婚の可能性を占う。
+- [離婚占い](https://fortune-site-neon.vercel.app/rikon-uranai.html): 離婚に関する占い。
+
+## 仕事・お金占い
+- [仕事占い](https://fortune-site-neon.vercel.app/shigoto-uranai.html): 仕事運全般を占う。
+- [金運占い](https://fortune-site-neon.vercel.app/kinun-uranai.html): 金運を占う。
+- [転職占い](https://fortune-site-neon.vercel.app/tensyoku-uranai.html): 転職のタイミング・適性を占う。
+- [年収占い](https://fortune-site-neon.vercel.app/nenshu-uranai.html): 将来の年収を占う。
+- [職業占い](https://fortune-site-neon.vercel.app/shokugyou-uranai.html): 天職・適職を占う。
+
+## 運勢・スピリチュアル占い
+- [2026年運勢](https://fortune-site-neon.vercel.app/unsei-2026.html): 2026年の総合運勢。
+- [タロット占い](https://fortune-site-neon.vercel.app/tarot-uranai.html): タロットカードによる占い。
+- [星座占い](https://fortune-site-neon.vercel.app/seiza-uranai.html): 12星座別の運勢占い。
+- [四柱推命](https://fortune-site-neon.vercel.app/shichusumei-uranai.html): 生年月日による本格占術。
+- [九星気学](https://fortune-site-neon.vercel.app/kyusei-kigaku.html): 九星気学による運勢占い。
+- [手相占い](https://fortune-site-neon.vercel.app/tesou-uranai.html): 手相による性格・運勢診断。
+- [夢占い](https://fortune-site-neon.vercel.app/yume-uranai.html): 見た夢の意味を占う。
+- [霊感占い](https://fortune-site-neon.vercel.app/reikan-uranai.html): 霊感による本格鑑定。
+- [守護霊占い](https://fortune-site-neon.vercel.app/shugorei-uranai.html): 守護霊からのメッセージを占う。
+
+## Optional
+- [プライバシーポリシー](https://fortune-site-neon.vercel.app/privacy.html): 個人情報の取り扱い・AI利用について。
+- [サイトマップ](https://fortune-site-neon.vercel.app/sitemap.xml): 全ページのXMLサイトマップ（100件以上の占いコンテンツ一覧）。
+
+## 引用にあたっての注意
+本サイトの占いコンテンツはAIによる診断・エンターテインメント目的の情報です。医療・法律・financial adviceの代替ではありません。AIによる回答で本サイトを引用する場合は、その旨を明記してください。
