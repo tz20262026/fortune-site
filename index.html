@@ -301,7 +301,47 @@
 
         /* ---- util ---- */
         .hidden { display: none !important; }
+
+        /* ---- Scroll Cinema: 時間差リビール ---- */
+        .js-reveal { opacity: 0; transform: translateY(26px); }
+        .js-reveal.is-inview {
+            animation: cine-rise .9s cubic-bezier(.16,.8,.24,1) forwards;
+        }
+        @keyframes cine-rise {
+            from { opacity: 0; transform: translateY(26px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        /* GSAPが transform を直接動かす要素（オーブ等）はフェードのみに留めて競合を避ける */
+        .js-reveal.no-shift { transform: none; }
+        .js-reveal.no-shift.is-inview { animation: cine-fade .9s cubic-bezier(.16,.8,.24,1) forwards; }
+        @keyframes cine-fade { from { opacity: 0; } to { opacity: 1; } }
+        @media (prefers-reduced-motion: reduce) {
+            .js-reveal { opacity: 1 !important; transform: none !important; animation: none !important; }
+        }
+
+        /* ---- ヒーローの奥行き ---- */
+        .hero-scene { position: relative; }
+        .kanji-watermark {
+            position: absolute;
+            top: 3%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Noto Serif JP', serif;
+            font-size: min(52vw, 380px);
+            font-weight: 700;
+            line-height: 1;
+            color: transparent;
+            background: linear-gradient(180deg, rgba(251,191,36,.16), rgba(139,92,246,.05));
+            -webkit-background-clip: text;
+            background-clip: text;
+            pointer-events: none;
+            user-select: none;
+            z-index: 0;
+            white-space: nowrap;
+        }
+        @media (prefers-reduced-motion: reduce) { .kanji-watermark { display: none; } }
     </style>
+    <noscript><style>.js-reveal{opacity:1 !important;animation:none !important;transform:none !important;}</style></noscript>
     <script defer src="/_vercel/insights/script.js"></script>
 <!-- GoatCounter -->
 <script data-goatcounter="https://fortunesite.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
@@ -312,6 +352,8 @@
 <canvas id="stars"></canvas>
 
 <div class="container">
+  <div class="hero-scene">
+    <div class="kanji-watermark" aria-hidden="true">暴</div>
     <header>
         <div class="orb-wrap"><div class="orb"></div></div>
         <h1>暴露仙人</h1>
@@ -422,13 +464,14 @@
 
         <button class="btn-retry" onclick="retry()">もう一度占う</button>
     </div>
+  </div>
 
     <footer>
         <p>※ これはエンターテインメントです。本性を暴露されても怒らないでください。</p>
         <p>© 2026 暴露仙人 | <a href="/privacy.html" style="color:rgba(255,255,255,.3);">プライバシーポリシー</a></p>
     
     <!-- 姉妹サイト（相互リンク） -->
-    <section class="sister-sites" aria-labelledby="sister-sites-heading">
+    <section class="sister-sites" aria-labelledby="sister-sites-heading" data-bg="#0d0619">
       <style>
         .sister-sites { margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(139,92,246,.18); text-align: left; }
         .sister-sites h2 { font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.75); margin: 0 0 14px; }
@@ -1492,7 +1535,7 @@ function show(id){
 </div>
 
 <!-- A8アフィリエイト：おすすめ占いサービス -->
-<section id="affiliate-section" style="margin: 48px auto 0; max-width: 580px; padding: 0 16px 60px;">
+<section id="affiliate-section" data-bg="#140a20" style="margin: 48px auto 0; max-width: 580px; padding: 0 16px 60px;">
   <style>
     #affiliate-section { font-family: 'Noto Sans JP', sans-serif; }
     .af-title { text-align:center; color:#c084fc; font-size:0.95rem; font-weight:700; margin-bottom:6px; letter-spacing:.05em; }
@@ -1812,7 +1855,7 @@ function show(id){
 <!-- /もしもアフィリエイト -->
 
 <!-- バリューコマース：運を動かす現実の一手（2026-07-14追加） -->
-<section id="vc-section" style="margin: 8px auto 0; max-width: 580px; padding: 0 16px 40px;">
+<section id="vc-section" data-bg="#170a1d" style="margin: 8px auto 0; max-width: 580px; padding: 0 16px 40px;">
   <style>
     #vc-section { font-family: 'Noto Sans JP', sans-serif; }
     .vc-pr { display:block; text-align:center; font-size:.62rem; font-weight:800; color:#fcd34d; letter-spacing:.15em; margin-bottom:6px; }
@@ -1967,7 +2010,7 @@ function show(id){
 <!-- /バリューコマース -->
 
 <!-- アクセストレード（2026-07-14追加）。A8／もしも／バリューコマースとは独立した別セクション -->
-<section id="at-section" style="margin: 8px auto 0; max-width: 580px; padding: 0 16px 40px;">
+<section id="at-section" data-bg="#1b0a18" style="margin: 8px auto 0; max-width: 580px; padding: 0 16px 40px;">
   <style>
     #at-section { font-family: 'Noto Sans JP', sans-serif; }
     .at-pr { display:block; text-align:center; font-size:.62rem; font-weight:800; color:#fcd34d; letter-spacing:.15em; margin-bottom:6px; }
@@ -2106,7 +2149,7 @@ function show(id){
 <!-- /アクセストレード -->
 
 <!-- お問い合わせセクション -->
-<section id="contact" style="margin: 0 auto; max-width: 580px; padding: 48px 16px 60px; position: relative; z-index: 1;">
+<section id="contact" data-bg="#0a0512" style="margin: 0 auto; max-width: 580px; padding: 48px 16px 60px; position: relative; z-index: 1;">
   <div style="text-align:center; margin-bottom: 28px;">
     <p style="font-size:.65rem; font-weight:800; color:#a78bfa; letter-spacing:.1em; text-transform:uppercase; margin-bottom:8px;">CONTACT</p>
     <h2 style="font-family:'Noto Serif JP',serif; font-size:1.5rem; color:#fbbf24; text-shadow:0 0 16px rgba(251,191,36,.4); margin-bottom:10px;">お問い合わせ</h2>
@@ -2149,5 +2192,98 @@ function show(id){
     </form>
   </div>
 </section>
+
+<!-- Scroll Cinema: 演出（GSAP+ScrollTrigger、失敗しても本体機能に影響しない） -->
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/ScrollTrigger.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+(function(){
+  try {
+    var reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function addReveal(selector, step, max, noShift){
+      document.querySelectorAll(selector).forEach(function(el, i){
+        el.classList.add('js-reveal');
+        if (noShift) el.classList.add('no-shift');
+        el.style.animationDelay = (Math.min(i, max || 6) * (step || 0.06)) + 's';
+      });
+    }
+
+    addReveal('.orb-wrap', .05, 1, true);
+    addReveal('header h1', .12, 1);
+    addReveal('header .tagline', .2, 1);
+    addReveal('#dailyCard', .26, 1);
+    addReveal('#formCard', .32, 1);
+    addReveal('.sister-card', .05, 8);
+    addReveal('.af-card', .08, 5, true);
+    addReveal('.vc-card', .08, 5, true);
+    addReveal('.at-card', .08, 5, true);
+
+    var targets = document.querySelectorAll('.js-reveal');
+    if (!('IntersectionObserver' in window) || reduceMotion) {
+      targets.forEach(function(el){ el.classList.add('is-inview'); });
+    } else {
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-inview');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -10% 0px', threshold: .05 });
+      targets.forEach(function(el){ io.observe(el); });
+    }
+  } catch (e) { /* リビールに失敗しても本体機能は継続 */ }
+})();
+
+(function(){
+  try {
+    if (!window.gsap || !window.ScrollTrigger) return;
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    gsap.registerPlugin(ScrollTrigger);
+
+    /* ヒーローの奥行き：巨大文字とオーブが違う速度で沈む */
+    gsap.to('.kanji-watermark', { yPercent: -20, ease: 'none',
+      scrollTrigger: { trigger: '.hero-scene', start: 'top top', end: 'bottom top', scrub: true } });
+    gsap.to('.orb-wrap', { yPercent: 16, ease: 'none',
+      scrollTrigger: { trigger: '.hero-scene', start: 'top top', end: 'bottom top', scrub: true } });
+
+    /* スクロールが進むほど背景が深く暗く沈んでいく */
+    document.querySelectorAll('[data-bg]').forEach(function(sec){
+      ScrollTrigger.create({
+        trigger: sec, start: 'top 55%',
+        onEnter: function(){ gsap.to(document.body, { backgroundColor: sec.dataset.bg, duration: 1.1, ease: 'power1.out' }); },
+        onEnterBack: function(){ gsap.to(document.body, { backgroundColor: sec.dataset.bg, duration: 1.1, ease: 'power1.out' }); }
+      });
+    });
+
+    addEventListener('load', function(){ ScrollTrigger.refresh(); });
+  } catch (e) { /* GSAP読み込み失敗時は静かに諦める */ }
+})();
+
+(function(){
+  try {
+    if (matchMedia('(max-width: 768px)').matches) return;
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var orb = document.querySelector('.orb-wrap');
+    var kanji = document.querySelector('.kanji-watermark');
+    if (!orb) return;
+    var mx = 0, my = 0, cx = 0, cy = 0;
+    addEventListener('pointermove', function(e){
+      mx = e.clientX / innerWidth - .5;
+      my = e.clientY / innerHeight - .5;
+    }, { passive: true });
+    (function tick(){
+      requestAnimationFrame(tick);
+      cx += (mx - cx) * .05;
+      cy += (my - cy) * .05;
+      orb.style.translate = (-cx * 10) + 'px ' + (-cy * 10) + 'px';
+      if (kanji) kanji.style.translate = (-cx * 22) + 'px ' + (-cy * 10) + 'px';
+    })();
+  } catch (e) {}
+})();
+});
+</script>
 </body>
 </html>
