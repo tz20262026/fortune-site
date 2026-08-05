@@ -625,6 +625,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://fortune-site-neon.vercel.app/niji-no-hashi.html</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://fortune-site-neon.vercel.app/privacy.html</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>yearly</changefreq>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>虹の橋からのメッセージ｜亡くなったペットからの手紙をAIが綴る無料ツール | 暴露仙人</title>
+  <meta name="description" content="大切なペットを亡くした方へ。名前・性格・思い出を入力すると、AIがその子になりきって「虹の橋からの手紙」を綴ります。ペットロスに寄り添う無料の癒やしツール。">
+  <meta name="keywords" content="虹の橋,ペットロス,ペット 手紙,ペット供養,グリーフケア,ペット 亡くなった">
+  <meta property="og:title" content="虹の橋からのメッセージ｜亡くなったペットからの手紙をAIが綴る">
+  <meta property="og:description" content="名前・性格・思い出を入力すると、AIがその子になりきって「虹の橋からの手紙」を綴ります。ペットロスに寄り添う無料ツール。">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:url" content="https://fortune-site-neon.vercel.app/niji-no-hashi.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://fortune-site-neon.vercel.app/og-image.png">
+  <meta property="og:image" content="https://fortune-site-neon.vercel.app/og-image.png">
+  <meta name="twitter:title" content="虹の橋からのメッセージ｜亡くなったペットからの手紙をAIが綴る">
+  <meta name="twitter:description" content="名前・性格・思い出を入力すると、AIがその子になりきって「虹の橋からの手紙」を綴ります。">
+  <link rel="canonical" href="https://fortune-site-neon.vercel.app/niji-no-hashi.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "虹の橋からのメッセージとはどんなツールですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "亡くなったペットの名前・性格・思い出を入力すると、AIがその子になりきって「虹の橋から届いた手紙」という形の温かいメッセージを綴る無料ツールです。占いや霊視で実際に通信するものではなく、飼い主様が語ってくれた思い出をもとにAIが創作する、癒やしのための文章です。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "本当にペットの気持ちが伝わってくるのですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "本ツールはAIによる創作であり、実際の霊的な交信を保証するものではありません。ただ、入力していただいた具体的な思い出をもとに文章を作るため、「あの子ならこう言いそう」と感じていただける、心を癒やすきっかけになるよう作られています。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ペットロスがつらいとき、他にできることはありますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "無理に元気を出そうとせず、悲しみを感じきることも大切な過程です。同じ経験をした人と気持ちを共有する、写真やメモリアルグッズで思い出の場所を作る、信頼できる人や専門家に話を聞いてもらうなどが助けになると言われています。つらさが長く続く場合は、グリーフケアの専門家に相談することもひとつの方法です。"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #0b0714; color: #f0e6ff; font-family: 'Noto Sans JP', sans-serif; min-height: 100vh; }
+    .wrap { max-width: 640px; margin: 0 auto; padding: 24px 16px 80px; }
+    .nav-bar { background: rgba(109,40,217,.15); border-bottom: 1px solid rgba(139,92,246,.2); padding: 12px 16px; text-align: center; font-size: .85rem; }
+    .nav-bar a { color: #a78bfa; text-decoration: none; }
+    .hero { text-align: center; padding: 40px 0 28px; border-bottom: 1px solid rgba(139,92,246,.15); margin-bottom: 28px; }
+    .hero-badge {
+      display:inline-block; font-size:.7rem; font-weight:900; padding:4px 14px; margin-bottom:16px;
+      border-radius:20px; color:#fff;
+      background: linear-gradient(90deg,#f87171,#fbbf24,#4ade80,#60a5fa,#a78bfa);
+    }
+    h1 { font-family:'Noto Serif JP',serif; font-size:1.75rem; color:#fbcfe8; line-height:1.45; margin-bottom:14px; }
+    .hero-sub { font-size:.85rem; color:#c4b5fd; line-height:1.8; }
+
+    .notice-box {
+      background: rgba(167,139,250,.08); border:1px solid rgba(167,139,250,.25); border-radius:14px;
+      padding:16px 18px; margin-bottom:28px; font-size:.76rem; color:#e9d5ff; line-height:1.8;
+    }
+    .notice-box strong { color:#fbcfe8; }
+
+    label { display:block; font-size:.8rem; font-weight:700; color:#c4b5fd; margin: 18px 0 8px; }
+    input[type="text"], select, textarea {
+      width:100%; background: rgba(255,255,255,.05); border:1px solid rgba(167,139,250,.3); border-radius:10px;
+      padding:12px 14px; color:#f0e6ff; font-size:.9rem; font-family:inherit;
+    }
+    textarea { min-height:80px; resize:vertical; }
+    input::placeholder, textarea::placeholder { color:#8b7bab; }
+
+    .submit-btn {
+      display:block; width:100%; margin-top:24px; padding:15px; border:none; border-radius:12px; cursor:pointer;
+      font-size:1rem; font-weight:900; color:#fff;
+      background: linear-gradient(135deg,#be185d,#7c3aed);
+    }
+    .submit-btn:disabled { opacity:.6; }
+
+    .result-card { display:none; margin-top:28px; }
+    .result-letter {
+      background: linear-gradient(160deg, rgba(190,24,93,.14), rgba(124,58,237,.16));
+      border:1px solid rgba(251,207,232,.3); border-radius:16px; padding:24px 20px;
+      white-space: pre-wrap; line-height:2; font-size:.92rem; color:#fdf2f8;
+    }
+    .result-from { text-align:center; font-size:.75rem; color:#c4b5fd; margin-top:10px; }
+    .share-btn {
+      display:block; text-align:center; margin-top:16px; padding:13px; border-radius:10px; text-decoration:none;
+      font-size:.85rem; font-weight:800; color:#fff; background:#1d9bf0;
+    }
+    .retry-btn {
+      display:block; width:100%; text-align:center; margin-top:10px; padding:12px; border-radius:10px;
+      background:transparent; border:1px solid rgba(167,139,250,.35); color:#c4b5fd; font-size:.82rem; cursor:pointer;
+    }
+
+    h2.sec-title { font-family:'Noto Serif JP',serif; font-size:1.1rem; color:#fbbf24; border-left:3px solid #7c3aed; padding-left:12px; margin: 40px 0 16px; }
+    .tip-item { display:flex; align-items:flex-start; gap:10px; padding:10px 0; border-bottom:1px solid rgba(139,92,246,.1); }
+    .tip-icon { font-size:1.1rem; flex-shrink:0; }
+    .tip-text { font-size:.83rem; color:#e9d5ff; line-height:1.7; }
+
+    .cross-card {
+      display:flex; flex-direction:column; gap:8px; background:linear-gradient(135deg,rgba(109,40,217,.18),rgba(67,20,127,.25));
+      border:1px solid rgba(139,92,246,.3); border-radius:14px; padding:18px; margin-top:10px; text-decoration:none; color:#f0e6ff;
+    }
+    .cross-name { font-size:.95rem; font-weight:900; color:#e9d5ff; }
+    .cross-desc { font-size:.78rem; color:#c4b5fd; line-height:1.7; }
+
+    .faq-item { border-bottom: 1px solid rgba(139,92,246,.15); padding: 16px 0; }
+    .faq-q { font-size:.9rem; font-weight:700; color:#c4b5fd; margin-bottom:8px; }
+    .faq-q::before { content:'Q. '; color:#fbbf24; }
+    .faq-a { font-size:.82rem; color:#e9d5ff; line-height:1.7; }
+    .faq-a::before { content:'A. '; color:#4ade80; font-weight:700; }
+    .back-link { text-align:center; margin-top:40px; }
+    .back-link a { color:#a78bfa; font-size:.85rem; text-decoration:none; }
+  </style>
+    <script defer src="/_vercel/insights/script.js"></script>
+<!-- GoatCounter -->
+<script data-goatcounter="https://fortunesite.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1040001457338104" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="nav-bar">
+    <a href="/">🔮 暴露仙人トップ</a> ›
+    虹の橋からのメッセージ
+  </nav>
+
+  <div class="wrap">
+    <div class="hero">
+      <div class="hero-badge">🌈 ペットロスに寄り添う無料ツール</div>
+      <h1>虹の橋からの<br>メッセージ</h1>
+      <p class="hero-sub">
+        名前・性格・思い出を教えてください<br>
+        AIがその子になりきって、手紙を綴ります
+      </p>
+    </div>
+
+    <div class="notice-box">
+      <strong>このツールについて：</strong>本ツールは占い・霊視ではありません。あなたが語ってくれた思い出をもとに、AIが「その子ならこう言いそう」という手紙を創作するものです。実際の交信を保証するものではありませんが、大切な思い出を言葉にして振り返る、心を癒やすきっかけになればと作りました。
+    </div>
+
+    <div id="formCard">
+      <label for="petName">お名前</label>
+      <input type="text" id="petName" placeholder="例：ムギ、ソラ、たろう" maxlength="20">
+
+      <label for="petType">種類</label>
+      <select id="petType">
+        <option value="犬">犬</option>
+        <option value="猫">猫</option>
+        <option value="うさぎ">うさぎ</option>
+        <option value="鳥">鳥</option>
+        <option value="ハムスター・小動物">ハムスター・小動物</option>
+        <option value="その他">その他</option>
+      </select>
+
+      <label for="personality">性格・好きだったこと</label>
+      <textarea id="personality" placeholder="例：甘えん坊で膝の上が大好き、お散歩のときは誰より元気、寝るときはいつも隣にいた…"></textarea>
+
+      <label for="memory">一番の思い出</label>
+      <textarea id="memory" placeholder="例：初めて家に来た日、一緒に見た夕日、いつも玄関でお出迎えしてくれたこと…"></textarea>
+
+      <button class="submit-btn" id="submitBtn" onclick="getMessage()">✉️ 手紙を受け取る</button>
+    </div>
+
+    <div id="loadingCard" style="display:none; text-align:center; padding:40px 0; color:#c4b5fd; font-size:.85rem;">
+      🌈 虹の橋にお手紙を届けています…
+    </div>
+
+    <div class="result-card" id="resultCard">
+      <div class="result-letter" id="resultLetter"></div>
+      <p class="result-from" id="resultFrom"></p>
+      <a href="#" class="share-btn" id="shareBtn" target="_blank">🕊️ この手紙をXでシェアする</a>
+      <button class="retry-btn" onclick="resetForm()">もう一度、別の思い出で書く</button>
+    </div>
+
+    <h2 class="sec-title">🕊️ ペットロスと向き合うために</h2>
+    <div class="tip-item">
+      <span class="tip-icon">💧</span>
+      <p class="tip-text"><strong>悲しみを無理に止めない。</strong>涙が出るのは、それだけ大切な存在だった証です。感じきることも大切な過程です。</p>
+    </div>
+    <div class="tip-item">
+      <span class="tip-icon">🗣️</span>
+      <p class="tip-text"><strong>気持ちを言葉にして誰かと共有する。</strong>同じ経験をした人に話すだけで、心が軽くなることがあります。</p>
+    </div>
+    <div class="tip-item">
+      <span class="tip-icon">📷</span>
+      <p class="tip-text"><strong>思い出の場所を作る。</strong>写真やお気に入りだったものを飾ることも、心を整理する助けになります。</p>
+    </div>
+    <div class="tip-item">
+      <span class="tip-icon">🌱</span>
+      <p class="tip-text"><strong>つらさが長く続くときは、無理せず専門家に。</strong>グリーフケアの専門家や、話を聞いてくれる人を頼ることも選択肢のひとつです。</p>
+    </div>
+
+    <h2 class="sec-title">🔮 大切な存在との繋がりを感じたい方へ</h2>
+    <a href="https://uranai20267.vercel.app" class="cross-card">
+      <span class="cross-name">御嶽の聲（うたきのこえ）</span>
+      <span class="cross-desc">沖縄のユタが伝える、ご先祖様や大切な存在との繋がりについての無料鑑定。姉妹サイトでお楽しみいただけます。</span>
+    </a>
+
+    <h2 class="sec-title">❓ よくある質問</h2>
+    <div class="faq-item">
+      <p class="faq-q">虹の橋からのメッセージとはどんなツールですか？</p>
+      <p class="faq-a">亡くなったペットの名前・性格・思い出を入力すると、AIがその子になりきって「虹の橋から届いた手紙」という形の温かいメッセージを綴る無料ツールです。占いや霊視で実際に通信するものではなく、思い出をもとにAIが創作する、癒やしのための文章です。</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">本当にペットの気持ちが伝わってくるのですか？</p>
+      <p class="faq-a">本ツールはAIによる創作であり、実際の霊的な交信を保証するものではありません。ただ、具体的な思い出をもとに文章を作るため、「あの子ならこう言いそう」と感じていただける、心を癒やすきっかけになるよう作られています。</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">ペットロスがつらいとき、他にできることはありますか？</p>
+      <p class="faq-a">無理に元気を出そうとせず、悲しみを感じきることも大切な過程です。同じ経験をした人と気持ちを共有する、思い出の場所を作る、専門家に話を聞いてもらうなどが助けになると言われています。</p>
+    </div>
+
+    <div class="back-link">
+      <a href="/">← 暴露仙人トップへ戻る</a> ／
+      <a href="/dream-uranai.html">夢占い辞典 →</a>
+    </div>
+  </div>
+
+<footer style="text-align:center;margin-top:2rem;padding:1rem 0;font-size:0.7rem;color:#6b7280;">© 2026 暴露仙人 | <a href="/privacy.html" style="color:#8b5cf6;">プライバシーポリシー</a>
+    <!-- 姉妹サイト（相互リンク） -->
+    <section class="sister-sites" aria-labelledby="sister-sites-heading">
+      <style>
+        .sister-sites { margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(139,92,246,.18); text-align: left; }
+        .sister-sites h2 { font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.75); margin: 0 0 14px; }
+        .sister-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+        @media (min-width: 640px) { .sister-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+        @media (min-width: 1024px) { .sister-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+        .sister-card { display: block; padding: 10px 12px; border: 1px solid rgba(139,92,246,.22); border-radius: 10px; background: rgba(255,255,255,.04); text-decoration: none; transition: background .2s, border-color .2s; }
+        .sister-card:hover { background: rgba(255,255,255,.08); border-color: rgba(167,139,250,.55); }
+        .sister-name { display: block; font-size: .82rem; font-weight: 700; color: rgba(255,255,255,.92); line-height: 1.4; }
+        .sister-desc { display: block; margin-top: 4px; font-size: .7rem; color: rgba(255,255,255,.72); line-height: 1.5; }
+      </style>
+      <h2 id="sister-sites-heading">姉妹サイト</h2>
+      <div class="sister-grid">
+      <a href="https://ai-news-site-wheat.vercel.app" class="sister-card">
+        <span class="sister-name">AI News Japan</span>
+        <span class="sister-desc">AIの最新ニュースを日本語で毎日配信</span>
+      </a>
+      <a href="https://beauty-tech-japan.vercel.app" class="sister-card">
+        <span class="sister-name">Beauty Tech Japan</span>
+        <span class="sister-desc">海外の美容・コスメ最新トレンド</span>
+      </a>
+      <a href="https://fukugyou-shindan-eosin.vercel.app" class="sister-card">
+        <span class="sister-name">副業タイプ診断AI</span>
+        <span class="sister-desc">あなたに合う副業を3分で診断</span>
+      </a>
+      <a href="https://youtubecons.vercel.app" class="sister-card">
+        <span class="sister-name">YouTube伸びない原因診断</span>
+        <span class="sister-desc">伸びない原因をAIが診断</span>
+      </a>
+      <a href="https://otsumami.vercel.app" class="sister-card">
+        <span class="sister-name">おつまみペアリング研究所</span>
+        <span class="sister-desc">お酒とおつまみの組み合わせ</span>
+      </a>
+      <a href="https://movie2026.vercel.app" class="sister-card">
+        <span class="sister-name">映画レビューDB</span>
+        <span class="sister-desc">名作映画のレビュー・検索</span>
+      </a>
+      <a href="https://kingin-souba.vercel.app" class="sister-card">
+        <span class="sister-name">金銀相場ナビ</span>
+        <span class="sister-desc">金・銀のリアルタイム相場</span>
+      </a>
+      <a href="https://furusato-teikibin.vercel.app" class="sister-card">
+        <span class="sister-name">ふるさと納税定期便</span>
+        <span class="sister-desc">定期便のふるさと納税ガイド</span>
+      </a>
+      <a href="https://shinseikatsu-kaden.vercel.app" class="sister-card">
+        <span class="sister-name">新生活家電ガイド</span>
+        <span class="sister-desc">一人暮らしの家電選び</span>
+      </a>
+      <a href="https://sango-bodycare.vercel.app" class="sister-card">
+        <span class="sister-name">サンゴボディケア</span>
+        <span class="sister-desc">産後のボディケア</span>
+      </a>
+      <a href="https://jyuken.vercel.app" class="sister-card">
+        <span class="sister-name">沖縄県立高校受験</span>
+        <span class="sister-desc">沖縄の高校受験情報</span>
+      </a>
+      <a href="https://koueigyannburu.vercel.app" class="sister-card">
+        <span class="sister-name">公営ギャンブル入門</span>
+        <span class="sister-desc">競馬・競艇などの基礎知識</span>
+      </a>
+      <a href="https://realestate-ivory.vercel.app" class="sister-card">
+        <span class="sister-name">沖縄不動産</span>
+        <span class="sister-desc">沖縄の不動産情報</span>
+      </a>
+      <a href="https://plangenius-ai.vercel.app" class="sister-card">
+        <span class="sister-name">PlanGenius AI</span>
+        <span class="sister-desc">AI事業計画書ジェネレーター</span>
+      </a>
+      <a href="https://uranai20267.vercel.app" class="sister-card">
+        <span class="sister-name">御嶽の聲（うたきのこえ）</span>
+        <span class="sister-desc">沖縄ユタの伝統占い・無料鑑定</span>
+      </a>
+      </div>
+    </section>
+</footer>
+
+<script>
+async function getMessage(){
+    const petName = document.getElementById('petName').value.trim();
+    const petType = document.getElementById('petType').value;
+    const personality = document.getElementById('personality').value.trim();
+    const memory = document.getElementById('memory').value.trim();
+
+    if(!petName || !personality || !memory){
+        alert('お名前・性格・思い出を入力してください。');
+        return;
+    }
+
+    document.getElementById('formCard').style.display = 'none';
+    document.getElementById('loadingCard').style.display = 'block';
+    document.getElementById('resultCard').style.display = 'none';
+
+    try {
+        const res = await fetch('/api/rainbow-bridge', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ petName, petType, personality, memory })
+        });
+        const data = await res.json();
+        if(data.result){
+            document.getElementById('resultLetter').textContent = data.result;
+            document.getElementById('resultFrom').textContent = petName + ' より';
+            const shareText = `🌈 ${petName}からの手紙が届きました\n\n#虹の橋 #ペットロス\nhttps://fortune-site-neon.vercel.app/niji-no-hashi.html`;
+            document.getElementById('shareBtn').href = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(shareText);
+            document.getElementById('loadingCard').style.display = 'none';
+            document.getElementById('resultCard').style.display = 'block';
+        } else {
+            throw new Error();
+        }
+    } catch(e){
+        alert('エラーが発生しました。もう一度お試しください。');
+        document.getElementById('loadingCard').style.display = 'none';
+        document.getElementById('formCard').style.display = 'block';
+    }
+}
+
+function resetForm(){
+    document.getElementById('resultCard').style.display = 'none';
+    document.getElementById('formCard').style.display = 'block';
+}
+</script>
+</body>
+</html>
