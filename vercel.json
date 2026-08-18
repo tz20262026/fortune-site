@@ -4,5 +4,12 @@
       "memory": 128,
       "maxDuration": 30
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
 }
